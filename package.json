@@ -1,0 +1,33 @@
+{
+  "name": "liqd-template",
+  "description": "Template Engine",
+  "version": "0.0.4",
+  "author": "radixxko",
+  "license": "MIT",
+  "main": "lib/template.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/radixxko/liqd-template.git"
+  },
+  "keywords": [
+    "template",
+    "liqd"
+  ],
+  "dependencies": {
+    "liqd-parser": "^1.2.3",
+    "liqd-style": "^1.0.1",
+    "uglify-js": "^3.4.2"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "mocha": "^5.0.4",
+    "nyc": "^11.6.0"
+  }
+}

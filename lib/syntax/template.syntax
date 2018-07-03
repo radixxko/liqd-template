@@ -1,0 +1,55 @@
+:string
+	/"([^"]*)"/1
+	/'([^']*)'/1
+
+:expression
+	/\{\s*([^}]+?)\s*\}/1
+
+:attribute_name
+	/[a-zA-Z0-9_\-]+/
+
+:attribute
+	$attribute:attribute_name = $:expression
+	$attribute:attribute_name = $value:string
+	$attribute:attribute_name
+
+:script
+	<script ?...$attributes:attribute > $source:/([^]*?)\s*(?=<\/script)/1 </script>
+
+:style
+	<style ?...$attributes:attribute > $source:/([^]*?)\s*(?=<\/style)/1 </style>
+
+:text
+	/[^{}<>\n]+/
+
+:tag_name
+	/<([a-z][a-z0-9]*)/1
+
+:tag
+	$tag:tag_name ?...$attributes:attribute />
+	$tag:tag_name ?...$attributes:attribute > ?...$:block </ $tag >
+
+:template_name
+	/<([A-Z][a-z0-9\.]+)/1
+
+:template
+	$template:template_name ?...$attributes:attribute />
+	$template:template_name ?...$attributes:attribute > ?...$:block </ $template >
+
+:for
+	/(for|foreach)/ ( $item:/[a-zA-Z_][a-zA-Z0-9_]*/ of $iterator:/[a-zA-Z_][a-zA-Z0-9_]*/ ) { ?...$:block }
+
+:statement
+	$:for
+	$:expression
+
+:block
+	$:style
+	$:script
+	$:template
+	$:tag
+	$:statement
+	$:text
+
+:main
+	...$:block
