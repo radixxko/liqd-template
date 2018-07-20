@@ -80,7 +80,7 @@
 <script>
 	window.Slider = function( element )
 	{
-		element.slider = this;
+		var slider = element.slider = this;
 
 		this.show = function( index )
 		{
@@ -101,11 +101,11 @@
 			30);
 
 			clearTimeout( this.timer );
-			this.timer = setTimeout( this.show.bind( this, '+' ), 3000 );
+			this.timer = setTimeout( function(){ requestAnimationFrame( slider.show.bind( slider, '+' )); }, 3000 );
 		}
 
 		this.active = 0;
-		this.timer = setTimeout( this.show.bind( this, '+' ), 3000 );
+		this.timer = setTimeout( function(){ requestAnimationFrame( slider.show.bind( slider, '+' )); }, 3000 );
 
 		element.querySelector('.slide').className = 'slide active';
 	}
@@ -114,7 +114,7 @@
 	<div class="slides">
 		for( slide of slides )
 		{
-			<a class="slide" alt={slide.title} href={slide.url}><img src={slide.img} alt={slide.title} /></a>
+			<a class="slide" title={slide.title} href={slide.url}><img src={slide.img} alt={slide.title} /></a>
 		}
 	</div>
 	<div class="arrow next" data-arrow="&#10095;" onclick="this.parentNode.slider.show('+');"></div>

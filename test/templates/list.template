@@ -1,0 +1,10 @@
+for( i, item of items )
+{
+	for( item2 of items )
+	{
+		for( i3, item3 of items )
+		{
+			<div>{i}:{item2}:{i3},{item3.toUpperCase()}</div>
+		}
+	}
+}
