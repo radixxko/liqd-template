@@ -38,7 +38,7 @@ require('http').createServer( async( req, res ) =>
 				//items: { 'a': 'aa', 'b': 'bb', 'c' : 'cc', 'd': 'dd', 't': 'brb' },
 				template: 'footer'
 			},
-			{});
+			{ test: a => a.repeat(5) });
 		}
 
 		res.end( render );
