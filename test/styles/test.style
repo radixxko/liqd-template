@@ -1,0 +1,3 @@
+$coloris: red;
+
+body{ background: $coloris !important; }
