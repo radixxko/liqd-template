@@ -12,6 +12,7 @@ for( i, item of items )
 		}
 		<div xlink:href="/static">
 			{ test('ABC') }
+			<Item />
 		</div>
 	}
 }

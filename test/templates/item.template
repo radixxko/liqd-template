@@ -1,0 +1,10 @@
+<style>
+	.item
+	{
+		background: red;
+	}
+</style>
+<script>
+	console.log('item');
+</script>
+Item

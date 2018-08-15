@@ -1,7 +1,7 @@
 {
   "name": "liqd-template",
   "description": "Template Engine",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "author": "radixxko",
   "license": "MIT",
   "main": "lib/template.js",
@@ -24,7 +24,7 @@
     "liqd-fs": "^1.0.1",
     "liqd-parser": "^1.2.4",
     "liqd-style": "^1.1.4",
-    "uglify-js": "^3.4.6"
+    "uglify-js": "^3.4.7"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",

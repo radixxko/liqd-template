@@ -1,1 +1,7 @@
+<style>
+	#footer{ background:red; }
+</style>
+<script>
+	console.log('toto je footer');
+</script>
 <div style={'color:'+color}>Toto je Footer {page.toLowerCase()}</div>
