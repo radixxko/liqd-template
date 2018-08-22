@@ -1,0 +1,7 @@
+
+for( i, item of items )
+{
+	<Inner i={i}>
+		<div class="Inner">{item}</div>
+	</Inner>
+}

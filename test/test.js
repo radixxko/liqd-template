@@ -32,7 +32,7 @@ require('http').createServer( async( req, res ) =>
 
 		for( i = 0; i < 1; ++i )
 		{
-			render = await template.render('page',
+			render = await template.render('outer',//'page',
 			{
 				items: [ 'a', 'b', 'c', 'ddd', 'brb' ],
 				//items: { 'a': 'aa', 'b': 'bb', 'c' : 'cc', 'd': 'dd', 't': 'brb' },

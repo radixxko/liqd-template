@@ -1,0 +1,4 @@
+<div class="Wrapper">
+	<div>{i}</div>
+	{CONTENT}
+</div>
