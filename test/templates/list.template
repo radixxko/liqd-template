@@ -6,7 +6,7 @@ for( i, item of items )
 		{
 			<div>{i}:{item2}:{i3},{item3.toUpperCase()}</div>
 		}
-		for( i3, item3 of items )
+		for( i3, item3 of ((( [ '8', '9', '13' ] ))) )
 		{
 			<div>{i}:{item2}:{i3},{item3.toUpperCase()}</div>
 		}

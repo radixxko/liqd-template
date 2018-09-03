@@ -1,7 +1,6 @@
-
 for( i, item of items )
 {
 	<Inner i={i}>
-		<div class="Inner">{item}</div>
+		<div class="Inner">{item.repeat(i*i)+'a'.repeat(4*i)}</div>
 	</Inner>
 }

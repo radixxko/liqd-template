@@ -1,12 +1,27 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<style require="/styles/test.style">body{background:white;color:#333;}</style>
+		if( Math.random() > 0.5 )
+		{
+			<style require="/styles/test.style">body{background:white;color:#333;}</style>
+		}
 		<script template={template} instance>
 			console.log( template );
 		</script>
 	</head>
 	<body>
+		if( 1 > 3 )
+		{
+			<div>Prvy</div>
+		}
+		else if( 32 > 3 )
+		{
+			<div>{ Math.random() }</div>
+		}
+		else
+		{
+			<div>Treti</div>
+		}
 		<List items={items} />
 		<{template} page="Ferko" color="blue" />
 		Marianko panko

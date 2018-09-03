@@ -32,10 +32,10 @@ require('http').createServer( async( req, res ) =>
 
 		for( i = 0; i < 1; ++i )
 		{
-			render = await template.render('outer',//'page',
+			render = await template.render('page',
 			{
-				items: [ 'a', 'b', 'c', 'ddd', 'brb' ],
-				//items: { 'a': 'aa', 'b': 'bb', 'c' : 'cc', 'd': 'dd', 't': 'brb' },
+				//items: [ 'a', 'b', 'c', 'ddd', 'brb' ],
+				items: { 'a': 'aa', 'b': 'bb', 'c' : 'cc', 'd': 'dd', 't': 'brb' },
 				template: 'footer'
 			},
 			{ test: a => a.repeat(5) });
