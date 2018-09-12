@@ -1,7 +1,7 @@
 'use strict';
 
 const Template = require('../lib/template.js');
-const template = new Template({ directory: __dirname + '/templates', extension: 'template' });
+const template = new Template({ directory: __dirname + '/templates', extension: 'template', internationalization: { locale: 'en', dictionary: __dirname + '/locales/main.json' } });
 
 require('http').createServer( async( req, res ) =>
 {
@@ -34,6 +34,7 @@ require('http').createServer( async( req, res ) =>
 		{
 			render = await template.render('page',
 			{
+				__locale: Math.random() < 0.5 ? 'de' : 'en',
 				//items: [ 'a', 'b', 'c', 'ddd', 'brb' ],
 				items: { 'a': 'aa', 'b': 'bb', 'c' : 'cc', 'd': 'dd', 't': 'brb' },
 				template: 'footer'

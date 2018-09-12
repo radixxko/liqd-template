@@ -46,6 +46,9 @@
 	$template:template_name ?...$attributes:attribute />
 	$template:template_name ?...$attributes:attribute > ?...$:block </ $template >
 
+:i18n
+	$( $arguments:pair_round_brackets )
+
 :if
 	if ( $condition:pair_round_brackets ) { ?...$:block } ?$:else
 
@@ -57,6 +60,7 @@
 	/(for|foreach)/ ( ?$key:/([a-zA-Z_][a-zA-Z0-9_]*)\s*,/1 $item:/[a-zA-Z_][a-zA-Z0-9_]*/ of $iterator:pair_round_brackets ) { ?...$:block }
 
 :statement
+	$:i18n
 	$:if
 	$:for
 	$:expression
