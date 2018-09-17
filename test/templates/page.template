@@ -10,6 +10,13 @@
 		</script>
 	</head>
 	<body>
+
+		let x = 31231231 + 23 * ( 11 / 4 );
+
+		x = 2 * x;
+
+		{x}
+
 		$( 'hello.world', { date: '"'+(new Date().getTime())+'"' })
 		if( 1 > 3 )
 		{

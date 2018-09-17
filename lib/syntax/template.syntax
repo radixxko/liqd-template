@@ -46,6 +46,12 @@
 	$template:template_name ?...$attributes:attribute />
 	$template:template_name ?...$attributes:attribute > ?...$:block </ $template >
 
+:declaration
+	$keyword:/(const|let|var)/ $variable:/[$_a-zA-Z][$_a-zA-Z0-9]*/ = $value:/(.*?)(?=\s*;)/ ;
+
+:assignment
+	$variable:/[$_a-zA-Z][$_a-zA-Z0-9]*/ = $value:/(.*?)(?=\s*;)/ ;
+
 :i18n
 	$( $arguments:pair_round_brackets )
 
@@ -60,6 +66,8 @@
 	/(for|foreach)/ ( ?$key:/([a-zA-Z_][a-zA-Z0-9_]*)\s*,/1 $item:/[a-zA-Z_][a-zA-Z0-9_]*/ of $iterator:pair_round_brackets ) { ?...$:block }
 
 :statement
+	$:declaration
+	$:assignment
 	$:i18n
 	$:if
 	$:for
