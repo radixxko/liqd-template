@@ -81,5 +81,8 @@
 	$:statement
 	$:text
 
+:doctype
+	$:/<!DOCTYPE\s+([^>]+?)\s*>/1
+
 :main
-	...$:block
+	?$:doctype ...$:block
