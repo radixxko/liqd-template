@@ -1,4 +1,4 @@
-<!DOCTYPE html super fasa>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8"/>
@@ -6,7 +6,8 @@
 		{
 			<style require="/styles/test.style">body{background:white;color:#333;}</style>
 		}
-		<script template={template} instance>
+		<script async src="janko"></script>
+		<script template={template+'prd'}>
 			console.log( template );
 		</script>
 	</head>
