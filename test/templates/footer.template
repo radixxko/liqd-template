@@ -4,4 +4,4 @@
 <script>
 	console.log('toto je footer');
 </script>
-<div style={'color:'+color}>Toto je Footer {page.toLowerCase()}</div>
+<div style={'color:'+color} onclick={'alert("test! <br/>");'}>Toto je "Footer" {'<div>'+page.toLowerCase()+'</div>'}</div>
