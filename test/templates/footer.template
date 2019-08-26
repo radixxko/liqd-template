@@ -5,3 +5,4 @@
 	console.log('toto je footer');
 </script>
 <div style={'color:'+color} onclick={'alert("test! <br/>");'}>Toto je "Footer" {'<div>'+page.toLowerCase()+'</div>'}</div>
+<div>Uplny #{'<span style="color:red">'+ 'koniec' + '</span>'}</div>
